@@ -1,0 +1,27 @@
+# query {
+#   item(id: "1") {
+#     id,
+#     values
+#   }
+# }
+# mutation {
+#   setItem(item:{ id: "1", values:["a", "b"]}) {
+#     id,
+#     values
+#   }
+# }
+
+# mutation {
+#   deleteItem(id:"1")
+# }
+
+# subscription{
+# 	itemSet {
+#     id
+#     values
+#   }
+# }
+
+subscription {
+ 	itemDeleted 
+}

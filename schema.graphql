@@ -1,0 +1,24 @@
+
+type Query {
+  item(id: ID!): Item
+}
+
+type Mutation {
+  setItem(item: SetItemInput): Item!
+  deleteItem(id: ID!): ID!
+}
+
+type Subscription {
+  itemSet: Item!
+  itemDeleted: ID!
+}
+
+type Item {
+  id: ID!
+  values: [String!]!
+}
+
+input SetItemInput {
+  id: ID!
+  values: [String!]!
+}
